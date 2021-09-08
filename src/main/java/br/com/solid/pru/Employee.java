@@ -7,12 +7,12 @@ package br.com.solid.pru;
  * 	 mas somente a funçao de repositorio.
  * 
  * - A classe Employee nao pode fazer a funçao de cook(), prune(), paint() e drive(), por isso ela deve ser 
- * 	 refatorada para atender os criterios PRU.
+ * 	 refatorada para respeitar o PRU.
  */
 
 public class Employee {
 
-	private String name;
+	private String name = "Charles";
 	
 
 	public String getName() {
@@ -21,6 +21,11 @@ public class Employee {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	@Override
+	public String toString() {
+		return "Employee [name=" + name + "]";
 	}
 	
 }
